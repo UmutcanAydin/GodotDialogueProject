@@ -4,54 +4,54 @@
 [ext_resource path="res://src/Assets/DialogueStyle.tres" type="StyleBox" id=3]
 [ext_resource path="res://src/Scenes/NPCs/Static Talker NPC/npc_talk_area.gd" type="Script" id=4]
 
-[sub_resource type="StreamTexture" id=12]
+[sub_resource type="StreamTexture" id=1]
 load_path = "res://.import/AllSprites.png-e813060706c1ab50da88ad07b43c14ea.stex"
 
-[sub_resource type="AtlasTexture" id=1]
-atlas = SubResource( 12 )
+[sub_resource type="AtlasTexture" id=2]
+atlas = SubResource( 1 )
 region = Rect2( 512, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=2]
-atlas = SubResource( 12 )
+[sub_resource type="AtlasTexture" id=3]
+atlas = SubResource( 1 )
 region = Rect2( 544, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=3]
-atlas = SubResource( 12 )
+[sub_resource type="AtlasTexture" id=4]
+atlas = SubResource( 1 )
 region = Rect2( 576, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=4]
-atlas = SubResource( 12 )
+[sub_resource type="AtlasTexture" id=5]
+atlas = SubResource( 1 )
 region = Rect2( 608, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=5]
-atlas = SubResource( 12 )
+[sub_resource type="AtlasTexture" id=6]
+atlas = SubResource( 1 )
 region = Rect2( 640, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=6]
-atlas = SubResource( 12 )
+[sub_resource type="AtlasTexture" id=7]
+atlas = SubResource( 1 )
 region = Rect2( 672, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=7]
-atlas = SubResource( 12 )
+[sub_resource type="AtlasTexture" id=8]
+atlas = SubResource( 1 )
 region = Rect2( 704, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=8]
-atlas = SubResource( 12 )
+[sub_resource type="AtlasTexture" id=9]
+atlas = SubResource( 1 )
 region = Rect2( 736, 0, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "Animate",
 "speed": 8.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=10]
+[sub_resource type="CapsuleShape2D" id=11]
 radius = 1.15868
 height = 7.5918
 
-[sub_resource type="CapsuleShape2D" id=11]
+[sub_resource type="CapsuleShape2D" id=12]
 radius = 1.23995
 height = 8.29468
 
@@ -61,14 +61,14 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -15.5 )
-frames = SubResource( 9 )
+frames = SubResource( 10 )
 animation = "Animate"
 frame = 5
 playing = true
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 rotation = 1.5708
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="NPCDialogueLabel" type="Label" parent="."]
 visible = false
@@ -117,4 +117,4 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TalkArea"]
 rotation = 1.5708
-shape = SubResource( 11 )
+shape = SubResource( 12 )

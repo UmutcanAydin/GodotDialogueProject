@@ -434,8 +434,8 @@ dialogue_box = NodePath("../PlayerDialogueLabel")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TalkArea"]
 shape = SubResource( 37 )
-[connection signal="button_up" from="AnswerButtons/Button" to="AnswerButtons/Button" method="_on_Button_button_up"]
-[connection signal="button_up" from="AnswerButtons/Button2" to="AnswerButtons/Button2" method="_on_Button2_button_up"]
-[connection signal="button_up" from="AnswerButtons/Button3" to="AnswerButtons/Button3" method="_on_Button3_button_up"]
+[connection signal="button_up" from="AnswerButtons/Button" to="AnswerButtons/Button" method="_on_button_up"]
+[connection signal="button_up" from="AnswerButtons/Button2" to="AnswerButtons/Button2" method="_on_button_up"]
+[connection signal="button_up" from="AnswerButtons/Button3" to="AnswerButtons/Button3" method="_on_button_up"]
 [connection signal="area_entered" from="TalkArea" to="TalkArea" method="_on_area_entered"]
 [connection signal="area_exited" from="TalkArea" to="TalkArea" method="_on_area_exited"]

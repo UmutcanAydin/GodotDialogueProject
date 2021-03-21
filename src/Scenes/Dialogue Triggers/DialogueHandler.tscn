@@ -11,3 +11,6 @@ __meta__ = {
 _player_dialog_text = NodePath("../YSort/Player/PlayerDialogueLabel")
 _player_answer_control = NodePath("../YSort/Player/AnswerButtons")
 _runtime_data = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

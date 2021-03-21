@@ -47,3 +47,4 @@ func _movement(delta) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, ACCELERATION * delta)
 
 	velocity = move_and_slide(velocity)
+
