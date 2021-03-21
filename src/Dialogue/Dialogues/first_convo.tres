@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/Dialogue/dialogue.gd" type="Script" id=1]
+[ext_resource path="res://src/Dialogue/Dialogues/first_convo_answer_2.tres" type="Resource" id=2]
+[ext_resource path="res://src/Dialogue/Dialogues/first_convo_answer_1.tres" type="Resource" id=3]
+
+[resource]
+script = ExtResource( 1 )
+talker = [ NodePath("PlayerDialogueLabel"), NodePath("NPCDialogueLabel"), NodePath("PlayerDialogueLabel") ]
+dialogue_slides = [ "Hey how are you", "Just keep moving pal", "Hmm... what should i say?" ]
+answers = [ ExtResource( 3 ), ExtResource( 2 ) ]
