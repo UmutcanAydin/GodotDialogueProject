@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://src/Scenes/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://src/Sprites/AllSprites.png" type="Texture" id=2]
@@ -8,10 +8,11 @@
 [ext_resource path="res://src/Assets/Theme.tres" type="Theme" id=6]
 [ext_resource path="res://src/Assets/hover_answer.tres" type="StyleBox" id=7]
 [ext_resource path="res://src/Assets/normal_answer.tres" type="StyleBox" id=8]
-[ext_resource path="res://src/Assets/click_answer.tres" type="StyleBox" id=9]
+[ext_resource path="res://src/Assets/pres_answer_tres.tres" type="StyleBox" id=9]
 [ext_resource path="res://src/Dialogue/Buttons/button_1.gd" type="Script" id=10]
 [ext_resource path="res://src/Dialogue/Buttons/button_2.gd" type="Script" id=11]
 [ext_resource path="res://src/Dialogue/Buttons/button_3.gd" type="Script" id=12]
+[ext_resource path="res://src/Assets/disabled_answer.tres" type="StyleBox" id=13]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.0313
@@ -315,6 +316,12 @@ graph_offset = Vector2( 230, -10 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=36]
 
+[sub_resource type="StyleBoxEmpty" id=38]
+
+[sub_resource type="StyleBoxEmpty" id=39]
+
+[sub_resource type="StyleBoxEmpty" id=40]
+
 [sub_resource type="CircleShape2D" id=37]
 radius = 21.624
 
@@ -386,6 +393,8 @@ margin_bottom = -49.669
 theme = ExtResource( 6 )
 custom_styles/hover = ExtResource( 7 )
 custom_styles/pressed = ExtResource( 9 )
+custom_styles/focus = SubResource( 38 )
+custom_styles/disabled = ExtResource( 13 )
 custom_styles/normal = ExtResource( 8 )
 text = "Option 1"
 script = ExtResource( 10 )
@@ -402,6 +411,8 @@ margin_bottom = -19.8189
 theme = ExtResource( 6 )
 custom_styles/hover = ExtResource( 7 )
 custom_styles/pressed = ExtResource( 9 )
+custom_styles/focus = SubResource( 39 )
+custom_styles/disabled = ExtResource( 13 )
 custom_styles/normal = ExtResource( 8 )
 text = "Option 3"
 script = ExtResource( 11 )
@@ -418,6 +429,8 @@ margin_bottom = -34.685
 theme = ExtResource( 6 )
 custom_styles/hover = ExtResource( 7 )
 custom_styles/pressed = ExtResource( 9 )
+custom_styles/focus = SubResource( 40 )
+custom_styles/disabled = ExtResource( 13 )
 custom_styles/normal = ExtResource( 8 )
 text = "Option 2"
 script = ExtResource( 12 )

@@ -1,12 +1,15 @@
 extends Control
 
 onready var timer:Timer = $Timer
+
 export(NodePath) onready var _player_dialog_text = get_node(_player_dialog_text) as Label
 export(NodePath) onready var _player_answer_control = get_node(_player_answer_control) as Control
+export(Resource) var _runtime_data = _runtime_data as RuntimeData
+
 var _npc_dialog_text: Label
 var _current_dialogue: Resource = _current_dialogue as Dialogue
 var _last_dialog_text: Label
-export(Resource) var _runtime_data = _runtime_data as RuntimeData
+
 var at_answers = false
 var _current_slide_index: int = 0
 
@@ -70,7 +73,7 @@ func _on_dialogue_initiated(dialogue: Dialogue, dialogue_box: Label) -> void:
 		_player_dialog_text.visible = true
 	_show_slide()
 
-func _on_dialogue_finished(_current_dialogue) -> void:
+func _on_dialogue_finished(_dialogue) -> void:
 	_runtime_data.current_game_state = Enums.GameState.WALKING
 	_last_dialog_text.visible = false
 

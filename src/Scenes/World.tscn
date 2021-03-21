@@ -39,7 +39,7 @@ position = Vector2( 55.5079, 101.47 )
 _dialogue = ExtResource( 5 )
 
 [node name="AnimatedSprite" parent="YSort/NPCs/NPC" index="0"]
-frame = 3
+frame = 6
 
 [node name="ChaserNPC" parent="YSort/NPCs" instance=ExtResource( 4 )]
 position = Vector2( 235.229, 61.96 )
